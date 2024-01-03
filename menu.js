@@ -26,7 +26,7 @@ var addOnLoadEvent = null;
 				//["OpenCYOA", "https://heptaveegesimal.com/opencyoa/", true],
 			]
 		},
-		"dd2": {
+		/*"dd2": {
 			"buttonText" : "Other Links",
 			"content" : [
 				["Discord", "https://discord.com/invite/ZqEXjqB", true],
@@ -37,7 +37,7 @@ var addOnLoadEvent = null;
 				["Villibrot", "https://distractionware.com/forum/index.php?topic=3772.0", false],
 				["A4A4A4", "https://distractionware.com/forum/index.php?topic=3649.0", false],
 			]
-		},
+		},*/
 	};
 
 	for(let dd in menuStructure){
