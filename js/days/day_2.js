@@ -10,9 +10,9 @@ registerDay(2,
                + "Obligatory Colorcharge Chart(tm):"
                + "<center><img src=\"desc/46_Colorcharge.png\" style=\"max-width:90%\"/></center><br>",
         "mines" : {
-            "R" : 35,
-            "B" : 20,
-            "G" : 20,
+            "R" : 30,
+            "B" : 15,
+            "G" : 15,
         },
         "grayMines" : false,
         "display" : "colorcharge",
