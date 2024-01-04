@@ -92,7 +92,7 @@ var addOnLoadEvent = null;
 		topBars[i]["object"] = document.getElementById(i);
 	}
 	let topBarContent = {};
-	for(s of ["home", "dd1", "about"]){
+	for(s of ["home", "dd1", "dd2", "about"]){
 		let tBarObj = document.getElementById("tbarcont-" + s);
 		topBarContent[s] = (tBarObj.classList.contains("dropdown") ? "<div class=\"dropdown\">" : "<div>") + tBarObj.innerHTML.replace(/[\t\n]/g,"") + "</div>";
 	}
@@ -117,7 +117,7 @@ var addOnLoadEvent = null;
 		if(version == "topbar-2"){
 			return tableHTML([
 					[tableHTML([[topBarContent["home"], topBarContent["dd1"]]], false, false)],
-					[tableHTML([topBarContent["about"]], false, false)]
+					[tableHTML([[topBarContent["dd2"], topBarContent["about"]]], false, false)]
 				],true, false);
 		/*}else if(version == "topbar-3"){
 			return tableHTML([
@@ -134,7 +134,7 @@ var addOnLoadEvent = null;
 			return tableHTML([
 					[tableHTML([[topBarContent["home"]]], false, false)],
 					[tableHTML([[topBarContent["dd1"]]], false, false)],
-					//[tableHTML([[topBarContent["dd2"]]], false, false)],
+					[tableHTML([[topBarContent["dd2"]]], false, false)],
 					[tableHTML([[topBarContent["about"]]], false, false)],
 				],true, false);
 		}else{
