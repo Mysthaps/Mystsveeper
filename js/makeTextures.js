@@ -69,6 +69,7 @@
 	for(let n in Textures.template.number){
 		Textures.background.number[n] = drawOnto(Textures.background.clear, Textures.template.number[n]);
 		Textures.background.numberGrayscale[n] = drawOntoRecolor(Textures.background.clearGrayscale, Textures.template.number[n], 0x68, 0x68, 0x68);
+		Textures.background.numberSlimed[n] = drawOntoRecolor(Textures.background.clearSlimed, Textures.template.number[n], 0x80, 0x00, 0x40)
 	}
 
 	const yx = -0.5;

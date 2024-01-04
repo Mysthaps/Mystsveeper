@@ -92,7 +92,7 @@ var addOnLoadEvent = null;
 		topBars[i]["object"] = document.getElementById(i);
 	}
 	let topBarContent = {};
-	for(s of ["home", "dd1", "dd2", "about"]){
+	for(s of ["home", "dd1", "about"]){
 		let tBarObj = document.getElementById("tbarcont-" + s);
 		topBarContent[s] = (tBarObj.classList.contains("dropdown") ? "<div class=\"dropdown\">" : "<div>") + tBarObj.innerHTML.replace(/[\t\n]/g,"") + "</div>";
 	}

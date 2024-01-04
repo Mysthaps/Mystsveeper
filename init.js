@@ -83,7 +83,7 @@ addOnLoadEvent(() => {
 	let startScript = "minesveeperMain.js";
 	// = = = = = = = = = = = = = = = = = = = = = = = = = =
 	// Load the day specific scripts
-	for(let i = 1; i <= 1; i++){
+	for(let i = 1; i <= 2; i++){
 		scriptList["day_" + i] = {
 			name : "days/day_" + i + ".js",
 			dependencies: ["days"],

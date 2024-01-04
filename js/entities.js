@@ -239,6 +239,23 @@ let activeEntities = [];
 		}
 	};
 
+	let slimeAI = (e, i, j, ev) => {
+		if (ev != Entities.events.digOrChord) return;
+		board.at(e.x, e.y).effect = "slimed";
+		let dx = i - e.x;
+		let dy = j - e.y;
+		let t = basicMove(e, dx, dy);
+		if((t == null)) return;
+		if (t.open && t.effect == "slimed"){
+			slimeAI(e, i, j, ev);
+			return;
+		}
+		setFlag(e.x, e.y, "");
+		t.open = true;
+		if(t.surroundingMines.length != 0 || t.mine != "") return;
+		openSurrounding(e.x, e.y);
+	};
+
 	let placingCycle = 0;
 
 	Entities.clear = function(){
@@ -292,6 +309,10 @@ let activeEntities = [];
 				}
 				E.ai = projectileAI;
 				E.texture = Textures.entities.projectile[E.direction];
+				break;
+			case "slime":
+				E.texture = Textures.entities.slime;
+				E.ai = slimeAI;
 				break;
 			default:
 				console.log("Unknown Entity: " + name);

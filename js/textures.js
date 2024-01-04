@@ -15,6 +15,7 @@ var Textures = {
 		explodedMine : {},
 		number : [],
 		numberGrayscale : [],
+		numberSlimed : [],
 		clearGrayscale : null,
 		numberColorcharge : [],
 		getColorCharge: null,
@@ -128,6 +129,7 @@ var Textures = {
 		return Textures.background.numberColorcharge[x][y];
 	};
 	Textures.background.clearGrayscale = loadTexture("grayscale/Ground.png", null);
+	Textures.background.clearSlimed = loadTexture("slimed/Ground.png", null)
 
 	Textures.entities.sheep = loadTexture("entities/Sheep.png", null);
 	Textures.entities.rat = loadTexture("entities/Rat.png", null);
@@ -139,6 +141,7 @@ var Textures = {
 	Textures.entities.projectile[1] = loadTexture("entities/Projectile_Down.png", null);
 	Textures.entities.projectile[2] = loadTexture("entities/Projectile_Left.png", null);
 	Textures.entities.projectile[3] = loadTexture("entities/Projectile_Up.png", null);
+	Textures.entities.slime = loadTexture("entities/Slime.png", null);
 
 	Textures.background.fractions.epsilon = loadTexture("numbers/num_epsilon.png", null);
 	Textures.background.fractions.frac_1_8 = loadTexture("numbers/num_frac_1_8.png", null);

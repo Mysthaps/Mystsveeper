@@ -44,6 +44,27 @@ var renderModes = {
 			draw(Textures.invalid);
 		}
 	},
+	"slimed" : function(tile, draw){
+		let data = tile.surroundingMines.toLowerCase();
+		let number = 0;
+		let g = 0;
+		let b = 0;
+		for(let i of data){
+			if(i == "r") number++;
+			if(i == "g") g++;
+			if(i == "b") b++;
+		}
+		if(number == 0 && ((!activeSettings.decrementing) || (tile.surroundingFlags == "")) && (g == 0 && b == 0)){
+			draw(Textures.background.clearSlimed);
+			return;
+		}
+		if(activeSettings.decrementing) number -= tile.surroundingFlags.length;
+		if(number in Textures.background.numberSlimed){
+			draw(Textures.background.numberSlimed[number]);
+		}else{
+			draw(Textures.invalid);
+		}
+	},
 	"probability" : function(tile, draw){
 		let p = tile.probability;
 		if(p == 0){
@@ -147,6 +168,8 @@ var renderTileRunning = function(tile, count, draw){
 			draw(t);
 		}else if(tile.effect == "grayscale"){
 			renderModes["grayscale"](tile, draw);
+		}else if(tile.effect == "slimed"){
+			renderModes["slimed"](tile, draw);
 		}else{
 			let displayMode = activeSettings.display;
 			if(typeof(displayMode) == "string"){

@@ -51,8 +51,8 @@ var day61Fnct = null;
 var day68Fnct = null;
 
 (function(){
-	for(let i = 1; i <= 1; i++) days[i] = null;
-	for(let i = 101; i <= 101; i++) days[i] = null;
+	for(let i = 1; i <= 100; i++) days[i] = null;
+	for(let i = 101; i <= 200; i++) days[i] = null;
 
 	let smallDefault = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]];
 	let largeDefault = [
