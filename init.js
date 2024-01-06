@@ -89,7 +89,7 @@ addOnLoadEvent(() => {
 			dependencies: ["days"],
 		};
 	}
-	for(let i = 101; i <= 100; i++){
+	for(let i = 101; i <= 101; i++){
 		scriptList["day_" + i] = {
 			name : "days/day_" + i + ".js",
 			dependencies: ["days"],
