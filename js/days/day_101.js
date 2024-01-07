@@ -8,10 +8,13 @@ registerDay(101,
               + "Question marks indicate that you do not need to know the number below that tile to progress.<br><br>"
               + "<i>You never need to guess</i>. Good luck.<br><br>"
               + "Obligatory Colorcharge Chart(tm):"
-              + "<center><img src=\"desc/46_Colorcharge.png\" style=\"max-width:90%\"/></center><br>",
+              + "<center><img src=\"desc/46_Colorcharge.png\" style=\"max-width:90%\"/></center><br><br>"
+              + "<b>Updated:</b> (Jan 7th)<br>"
+              + "- Changed the Blue 2 note, now placed at the start replacing the question mark<br>"
+              + "- Removed a Green mine to avoid a forced 50/50",
         "mines": {
             "R": 27,
-            "G": 27,
+            "G": 26,
             "B": 25
         },
         "grayMines": true,
@@ -20,7 +23,7 @@ registerDay(101,
         "autoRestart" : true,
         "x": 12,
         "y": 20,
-        "board": "/U4DQUBsEAo4BaPACwANGgBawPrkAr2AXSCHLA9dQxmgGmwC1wB6OgKbg9TAVFQDRYCSkAomAI2AdZABLwSv4EvYDrEAKqEU9AVKAfooAIcBUTBEYBdtQRyAGANCANAAIQc/yAL/J+/zoZoLnzY7YlaoutfqKGZ9qaTvc9f15n1htoXiDjXggBhGmHnEkFlSyA",
+        "board": "/U4DQUBsEAo4BaPACwANGgBawPrkAr2AXSCHLA9dQxmgGmwC1wB6OgKbg9TAVFQDRYCSkAomAI2AdZABLwSv4EvYDrEAKqEU9AVKAfooAIcBUTBEYBdtQJyAGANCANAAIQZfyAP/5/bToZoL+/o7YlaoutdyKH/uqaTuc1f55nVhtoXCDjXAgBhGmHnEkFlSyf4",
         "fixedPattern": true,
         "setter": [
             [1, 0, ["background", "questionmark"]],
@@ -46,7 +49,7 @@ registerDay(101,
             [4, 16, ["background", "questionmark"]],
         ],
         "letters": [
-            [5, 8, "Enclosed Hallway\n\nThis is the end of the line for this specific hallway. The number below this note is a Blue 2, and it is not suggested to continue opening tiles here unless you want to be sent back to the start."]
+            [1, 0, "Notes from a Former Explorer\n\nIf you ever find yourself stuck in a corridor, count the number of open tiles adjacent to the furthest tile at the time. If it is any number less than 3, there are no mine cancelling traps there. Otherwise, be prepared to take a long journey around."]
         ],
         "entityEvents" : function(x, y, ev){
             if(ev == Entities.events.startGame){
