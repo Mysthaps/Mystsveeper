@@ -49,7 +49,7 @@ registerDay(101,
             [4, 16, ["background", "questionmark"]],
         ],
         "letters": [
-            [1, 0, "Notes from a Former Explorer\n\nIf you ever find yourself stuck in a corridor, count the number of open tiles adjacent to the furthest tile at the time. If it is any number less than 3, there are no mine cancelling traps there. Otherwise, be prepared to take a long journey around."]
+            [1, 0, "Notes from a Former Explorer\n\nIf you ever find yourself unable to progress due to no way of distinguishing mine cancelling and no mine cancelling, mine cancelling should not be considered and proceed as normal. However, do take it into consideration if there is a different path to continue."]
         ],
         "entityEvents" : function(x, y, ev){
             if(ev == Entities.events.startGame){
