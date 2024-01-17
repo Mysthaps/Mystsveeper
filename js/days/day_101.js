@@ -9,9 +9,8 @@ registerDay(101,
               + "<i>You never need to guess</i>. Good luck.<br><br>"
               + "Obligatory Colorcharge Chart(tm):"
               + "<center><img src=\"desc/46_Colorcharge.png\" style=\"max-width:90%\"/></center><br><br>"
-              + "<b>Updated:</b> (Jan 7th)<br>"
-              + "- Changed the Blue 2 note, now placed at the start replacing the question mark<br>"
-              + "- Removed a Green mine to avoid a forced 50/50",
+              + "<b>Updated:</b> (Jan 17th)<br>"
+              + "- Modified the note again",
         "mines": {
             "R": 27,
             "G": 26,
@@ -49,7 +48,7 @@ registerDay(101,
             [4, 16, ["background", "questionmark"]],
         ],
         "letters": [
-            [1, 0, "Notes from a Former Explorer\n\nIf you ever find yourself unable to progress due to no way of distinguishing mine cancelling and no mine cancelling, mine cancelling should not be considered and proceed as normal. However, do take it into consideration if there is a different path to continue."]
+            [1, 0, "Notes from a Former Explorer\n\nIf you ever find yourself unable to progress due to mine cancelling, it should not be considered and proceed as normal. However, this does not apply to tiles adjacent to a monocolored 2."]
         ],
         "entityEvents" : function(x, y, ev){
             if(ev == Entities.events.startGame){
